@@ -6,8 +6,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+let friends = ["Nitin", "Eric", "Jeddy", "Cameron", "Riley"];
+
 app.get("/api/users", (req, res) => {
-    let friends = ["Nitin", "Eric", "Jeddy", "Cameron", "Riley"];
     res.status(200).send(friends);
   });
 
